@@ -41,8 +41,11 @@ def main():
             else:
                 current = float(current_input)
 
-            resistance = calculate_resistance(voltage, current)
-            print("Resistance = ", resistance, "Ω")
+            try:
+                    resistance = calculate_resistance(voltage, current)
+                    print("Resistance = ", resistance, "Ω")
+            except ZeroDivisionError: 
+                 print("Error: Current cannot be zero")
 
         elif choice == "2":
             direction = input("Enter conversion (mm_to_in or in_to_mm): ")

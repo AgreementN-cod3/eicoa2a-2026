@@ -10,3 +10,6 @@ Note:  the function raises a Zero division error if current = 0
 """
     return voltage / current
 
+assert calculate_resistance(9, 0.03) == 300
+assert calculate_resistance(24, 2) == 12
+print(calculate_resistance.__doc__)
