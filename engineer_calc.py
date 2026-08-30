@@ -1,6 +1,13 @@
 from ohms_law import calculate_resistance
 from unit_converter import mm_to_inches, inches_to_mm
 
+DEFAULT_CURRENT = 0.5
+print("Global value:", DEFAULT_CURRENT)
+
+def show_default():
+        DEFAULT_CURRENT = 1.0
+        print("Inside function:", DEFAULT_CURRENT)
+
 def display_menu():
     """
     Prints a numbered menu of engineering calculations.
@@ -11,12 +18,14 @@ def display_menu():
         3. Exit
     """
     print("\n--- Engineering Calculator Menu---" )
-    print("1. calculated resistance (ohm's laws)")
+    print("1. calculate resistance (ohm's laws)")
     print("2. Convert length (mm to inches and inches to mm)")    
     print("3. Exit")  
 
 def main():
     running = True
+   
+    show_default(), print("Outside function:", DEFAULT_CURRENT)
 
     while running:
         display_menu()
@@ -25,7 +34,12 @@ def main():
 
         if choice == "1":
             voltage = float(input("Enter voltage (V): "))
-            current = float(input("Enter current (A): "))
+            current_input = (input("Enter current (A)or press enter for default: "))
+
+            if current_input == "":
+                current = DEFAULT_CURRENT
+            else:
+                current = float(current_input)
 
             resistance = calculate_resistance(voltage, current)
             print("Resistance = ", resistance, "Ω")
@@ -56,3 +70,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
