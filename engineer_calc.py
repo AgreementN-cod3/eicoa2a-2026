@@ -1,6 +1,7 @@
 from ohms_law import calculate_resistance
 from unit_converter import mm_to_inches, inches_to_mm
 from unit_converter import cm_to_inches, inches_to_cm
+from build_menu import build_menu
 
 DEFAULT_CURRENT = 0.5
 print("Global value:", DEFAULT_CURRENT)
@@ -10,20 +11,7 @@ def show_default():
         print("Inside function:", DEFAULT_CURRENT)
 
 def display_menu():
-    """
-    Prints a numbered menu of engineering calculations.
-
-    The menu includes:
-        1. calculated resistance (ohm's laws)
-        2. Convert length (mm to inches and inches to mm)
-        3. Convert length (cm to inches and inches to cm)
-        4. Exit
-    """
-    print("\n--- Engineering Calculator Menu---" )
-    print("1. calculate resistance (ohm's laws)")
-    print("2. Convert length (mm to inches and inches to mm)")  
-    print("3. Convert length (cm to inches and inches to cm)")  
-    print("3. Exit")  
+     build_menu()
 
 def main():
     running = True
