@@ -1,0 +1,16 @@
+1.Purpose of a Function: 
+    allows the ability to do repeated tasks without repeating lines of code
+
+2. How do parameters and return values work?
+    Parameters in in functions can act as variables which contain data that you can use to perform certain tasks
+    return values, are your calculated values from the function you defined.
+
+3. Why are docstrings important? 
+    Docstrings are important because they specify what the function is supposed to do and guide one on how to structure they way their function should work
+
+4. What is the difference between a local variable and a global variable? 
+    A global variable is a variable that are created/works outside of your functions
+    where else local variables are variables to are specific to your functions and work within your functions
+
+5. How does Git help programmers manage software projects? 
+    It makes it easier to track and add progress to existing projects. 
